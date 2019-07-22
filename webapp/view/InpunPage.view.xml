@@ -1,0 +1,63 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="ZKOS.HW-2.controller.InpunPage">
+	<App>
+		<pages><Page title="Title">
+				<content>
+					 <Toolbar width="100%" id="toolbar1">
+					        <content>
+					            <Button xmlns="sap.m" text="Back" id="button1" width="100px"/>
+					            <ToolbarSpacer id="spacer0"/>
+					            <Button xmlns="sap.m" text="Next" id="button2" width="100px"/>
+					        </content>
+					    </Toolbar>
+					 <sap.ui.layout:VerticalLayout width="100%" xmlns:sap.ui.layout="sap.ui.layout" id="layout0">
+					     <sap.ui.layout:content>
+					         <SearchField xmlns="sap.m" placeholder="Search for ..." id="field0"/>
+					         <ActionSelect id="select1"/>
+					         <Select xmlns="sap.m" id="select2">
+					             <items>
+					                 <core:Item xmlns:core="sap.ui.core" key="item-key-1" text="Item Text One" id="item69"/>
+					                 <core:Item xmlns:core="sap.ui.core" key="item-key-2" text="Item Text Two" id="item70"/>
+					                 </items>
+					             
+					         </Select>
+					         <ComboBox xmlns="sap.m" id="box1">
+					             <items>
+					                 <core:Item xmlns:core="sap.ui.core" key="item-1-key" text="Item 1 Text" id="item0"/>
+					                 <core:Item xmlns:core="sap.ui.core" key="item-2-key" text="Item 2 Text" id="item1"/>
+					                 </items>
+					             
+					         </ComboBox>
+					         <CheckBox xmlns="sap.m" text="Check Box" selected="false" id="box0"/>
+					         <sap.ui.layout:HorizontalLayout id="layout1">
+					             <sap.ui.layout:content>
+					                 <TimePicker xmlns="sap.m" id="picker1"/>
+					                 <DatePicker xmlns="sap.m" id="picker0"/>
+					             </sap.ui.layout:content>
+					         </sap.ui.layout:HorizontalLayout>
+					         <FeedInput placeholder="Опубликуйте здесь что-нибудь" buttonTooltip="Отправить" id="input0"/>
+					         <Input xmlns="sap.m" value="Value" id="input1"/>
+					         <RadioButtonGroup xmlns="sap.m" columns="1" id="group0">
+					             <buttons>
+					                 <RadioButton text="Option One" id="button0"/>
+					                 <RadioButton text="Option Two" id="button1_1563793724882"/>
+					                 </buttons>
+					             
+					         </RadioButtonGroup><SegmentedButton xmlns="sap.m" selectedKey="one" id="button2_1563793784576">
+					             <items>
+					                 <SegmentedButtonItem text="Button One" key="one" id="item62"/>
+					                 <SegmentedButtonItem text="Button Two" key="two" id="item63"/>
+					                 <SegmentedButtonItem text="Button Three" key="three" id="item64"/>
+					                 </items>
+					             
+					         </SegmentedButton>
+					         <Slider xmlns="sap.m" value="30" id="slider0"/>
+					         <RatingIndicator xmlns="sap.m" maxValue="5" value="3" id="indicator1"/>
+					         <Switch xmlns="sap.m" id="switch0"/>
+					         <RatingIndicator xmlns="sap.m" maxValue="5" value="3" id="indicator0"/>
+					     </sap.ui.layout:content>
+					 </sap.ui.layout:VerticalLayout>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

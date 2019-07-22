@@ -1,0 +1,27 @@
+<core:FragmentDefinition xmlns:core='sap.ui.core'>
+	<sap.ui.layout.form:FormContainer xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:sap.ui.layout.form="sap.ui.layout.form" title="Form"
+		id="container4">
+		<sap.ui.layout.form:formElements>
+			<sap.ui.layout.form:FormElement label="Info" id="element4">
+				<sap.ui.layout.form:fields>
+					<sap.ui.layout:VerticalLayout xmlns:sap.ui.layout="sap.ui.layout" width="70%" id="layout2">
+						<sap.ui.layout:content>
+							<Input xmlns="sap.m" id="input0" type="Email" placeholder="E-mail" fieldWidth="20%"/>
+							<Input xmlns="sap.m" id="input2" type="Time" placeholder="Time"/>
+							<Input xmlns="sap.m" width="100%" id="input4" type="Date" placeholder="Date"/>
+							<Input xmlns="sap.m" id="input5" type="Tel" placeholder="Phone"/>
+							<Input xmlns="sap.m" id="input3" type="Url" placeholder="URL"/>
+							<Input xmlns="sap.m" id="input1" placeholder="Name" fieldWidth="100%"/>
+							<Toolbar xmlns="sap.m" width="100%" id="toolbar1_1563539805728" style="Clear">
+								<content>
+									<ToolbarSpacer id="spacer1"/>
+									<Button xmlns="sap.m" text="Send" id="button0" width="150px" press="onSend"/>
+								</content>
+							</Toolbar>
+						</sap.ui.layout:content>
+					</sap.ui.layout:VerticalLayout>
+				</sap.ui.layout.form:fields>
+			</sap.ui.layout.form:FormElement>
+		</sap.ui.layout.form:formElements>
+	</sap.ui.layout.form:FormContainer>
+</core:FragmentDefinition>
