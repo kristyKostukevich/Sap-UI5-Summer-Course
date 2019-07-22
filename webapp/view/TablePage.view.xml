@@ -1,0 +1,59 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="ZKOS.HW-2.controller.TablePage">
+	<App>
+		<pages>
+			<Page title="Title">
+				<content>
+					<Toolbar width="100%" id="toolbar1">
+					        <content>
+					            <Button xmlns="sap.m" id="button1" width="100px" text="{i18n>InputPage}" press="action" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" action:wiring="\{'press':\{'navigation':\{'routeName':'InpunPage'\}\}\}"/>
+					            <ToolbarSpacer id="spacer0"/>
+					            <Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="button2" width="100px" text="{i18n>FormPage}" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Form'\}\}\}"/>
+					        </content>
+					</Toolbar>
+					<Table id="peopleList" growing="true" growingThreshold="10" items="{path: 'people>/value',         parameters: {           $count: true}           }">
+							<headerToolbar>
+								<OverflowToolbar>
+									<content>
+										<ToolbarSpacer/>
+										<SearchField id="searchField" width="20%" placeholder="{i18n>searchFieldPlaceholder}" search=".onSearch"/>
+										<Button id="sortUsersButton" press="onSort" tooltip="{i18n>sortButtonText}" icon="sap-icon://sort"/>
+										<Button id="refreshUsersButton" icon="sap-icon://refresh" tooltip="{i18n>refreshButtonText}" press=".onRefresh"/>
+										</content>
+									</OverflowToolbar>
+								</headerToolbar>
+							<columns>
+								<Column id="userNameColumn">
+									<Text text="{i18n>userNameLabelText}"/>
+								</Column>
+								<Column id="firstNameColumn">
+									<Text text="{i18n>firstNameLabelText}"/>
+								</Column>
+								<Column id="lastNameColumn">
+									<Text text="{i18n>lastNameLabelText}"/>
+								</Column>
+								<Column id="ageColumn">
+									<Text text="{i18n>ageLabelText}"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<ObjectIdentifier title="{people>UserName}"/>
+									</cells>
+									<cells>
+										<Text text="{people>FirstName}"/>
+									</cells>
+									<cells>
+										<Text text="{people>LastName}"/>
+									</cells>
+									<cells>
+										<Text text="{people>Age}"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
