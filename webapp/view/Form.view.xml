@@ -4,9 +4,9 @@
 			<Page id="page" title="{i18n>title}">
 						<Toolbar width="100%" id="toolbar1">
 					        <content>
-					            <Button xmlns="sap.m" id="button1" width="100px" text="{i18n>PrevTable}"/>
+					            <Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="button1" width="100px" text="{i18n>Table}" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'TablePage'\}\}\}"/>
 					            <ToolbarSpacer id="spacer0"/>
-					            <Button xmlns="sap.m" id="button2" width="100px" text="{i18n>NextInputPage}" press="action" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" action:wiring="\{'press':\{'navigation':\{'routeName':'InpunPage'\}\}\}"/>
+					            <Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="button2" width="100px" text="{i18n>InputPage}" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'InpunPage'\}\}\}"/>
 					        </content>
 					    </Toolbar>
 					    <sap.ui.layout.form:Form xmlns:sap.ui.layout.form="sap.ui.layout.form" editable="true" id="form1">

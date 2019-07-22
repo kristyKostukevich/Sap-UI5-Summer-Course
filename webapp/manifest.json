@@ -56,6 +56,10 @@
 				"settings": {
 					"bundleName": "ZKOS.HW-2.i18n.i18n"
 				}
+			},
+			"people": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "people.json"
 			}
 		},
 		"resources": {
@@ -94,6 +98,13 @@
 					"target": [
 						"InpunPage"
 					]
+				},
+				{
+					"name": "TablePage",
+					"pattern": "TablePage",
+					"target": [
+						"TablePage"
+					]
 				}
 			],
 			"targets": {
@@ -111,6 +122,10 @@
 				"Form": {
 					"viewType": "XML",
 					"viewName": "Form"
+				},
+				"TablePage": {
+					"viewType": "XML",
+					"viewName": "TablePage"
 				}
 			}
 		}
