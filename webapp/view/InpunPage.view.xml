@@ -4,7 +4,7 @@
 				<content>
 					 <Toolbar width="100%" id="toolbar1">
 					        <content>
-					            <Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="button1" width="100px" text="{i18n>FormPage}" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'Form'\}\}\}"/>
+					            <Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="button1" width="100px" text="{i18n>FormPage}" press="onNavBack"/>
 					            <ToolbarSpacer id="spacer0"/>
 					            <Button xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="button2" width="100px" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'TablePage'\}\}\}" text="{i18n>Table}"/>
 					        </content>

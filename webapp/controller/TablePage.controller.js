@@ -6,8 +6,10 @@ sap.ui.define([
 	"sap/ui/model/Sorter",
 	"sap/ui/model/Filter",
 	"sap/ui/model/FilterOperator",
-	"sap/ui/model/FilterType"
-], function (Controller, JSONModel,   MessageToast, MessageBox, Sorter, Filter, FilterOperator, FilterType) {
+	"sap/ui/model/FilterType",
+	"sap/ui/core/routing/History",
+	"sap/ui/core/UIComponent"
+], function (Controller, JSONModel,   MessageToast, MessageBox, Sorter, Filter, FilterOperator, FilterType, History, UIComponent) {
 	"use strict";
 	
 	return Controller.extend("ZKOS.HW-2.controller.TablePage", {
@@ -106,6 +108,22 @@ sap.ui.define([
 				} else {
 					this.getOwnerComponent().getRouter().navTo(oNavigation.routeName);
 				}
+			}
+		},
+		getRouter : function () {
+			return UIComponent.getRouterFor(this);
+		},
+
+		onNavBack: function () {
+			var oHistory, sPreviousHash;
+
+			oHistory = History.getInstance();
+			sPreviousHash = oHistory.getPreviousHash();
+
+			if (sPreviousHash !== undefined) {
+				window.history.go(-1);
+			} else {
+				this.getRouter().navTo("InpunPage", {}, true /*no history*/);
 			}
 		}
 	});

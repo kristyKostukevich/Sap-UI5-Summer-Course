@@ -1,4 +1,7 @@
-sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
+sap.ui.define([
+	"sap/ui/core/mvc/Controller",
+	"sap/ui/core/routing/History",
+	"sap/ui/core/UIComponent"], function (Controller, History, UIComponent) {
 	"use strict";
 	return Controller.extend("ZKOS.HW-2.controller.InpunPage", {
 		/**
@@ -39,6 +42,22 @@ sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 				} else {
 					this.getOwnerComponent().getRouter().navTo(oNavigation.routeName);
 				}
+			}
+		},
+		getRouter : function () {
+			return UIComponent.getRouterFor(this);
+		},
+
+		onNavBack: function () {
+			var oHistory, sPreviousHash;
+
+			oHistory = History.getInstance();
+			sPreviousHash = oHistory.getPreviousHash();
+
+			if (sPreviousHash !== undefined) {
+				window.history.go(-1);
+			} else {
+				this.getRouter().navTo("Form", {}, true /*no history*/);
 			}
 		}
 	});
